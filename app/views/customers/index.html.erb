@@ -1,21 +1,13 @@
-<h1>List of Kopi</h1>
+<h1>List of Customers</h1>
 
 <table>
-<% @kopis.each do |kopi| %>
+<% @customers.each do |customer| %>
     <tr>
-      <td><%= kopi.name %></td>
-      <td><%= link_to 'Show', kopi_path(kopi) %></td>
+      <td><%= customer.name %></td>
+      <td><%= link_to 'Show', customer_path(customer) %></td>
     </tr>
   <% end %>
   </table>
-<br/>
-<% if user_signed_in? %>
-<%= link_to 'Add New Kopi', new_kopi_path %>
-<% end %>
-<br/><br/>
-
-<%= link_to 'Order List', orders_path %>
-
 
 <br/><br/>
 <%= link_to 'Home', root_path %>

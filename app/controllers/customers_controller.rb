@@ -18,7 +18,7 @@ class CustomersController < ApplicationController
     end
   
     def create
-      @customer = Customer.new(kopi_params)
+      @customer = Customer.new(customer_params)
   
       @customer.save
       redirect_to @customer
